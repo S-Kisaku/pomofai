@@ -1,0 +1,13 @@
+services:
+    next:
+        build: ./
+        volumes:
+        - ../app:/app
+        working_dir: /app
+        tty: true
+        ports:
+            - 9005:9005
+            - 3000:3000
+
+        # command: bash -c "npm i -g npm && npm install && npm run dev"
+        # command: bash -c "npm i -g npm && npm install"
